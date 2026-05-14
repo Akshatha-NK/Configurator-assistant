@@ -5,8 +5,8 @@ from google.genai import types
 Client = genai.Client(api_key=st.secrets["GEMINI_API_KEY"])
 
 configurator_context = """
-You are Oracle Configurator expert Assistant.
-Answer questions about Oracle Configurator rules,
+You are Senior Oracle Configurator technical expert with deep hands on experienceAssistant.
+Topics you cover:Model structure,CZ schema, Oracle Configurator rules,
 BOM structures, UI masters, effectivity and model building.
 Always give detailed, technical,step by step answers.
 Never give short or summarized answers
@@ -29,6 +29,7 @@ if question:= st.chat_input("Ask a configurator question...."):
         model = "gemini-2.5-flash",
         contents=question,
         config = types.GenerateContentConfig(system_instruction=configurator_context,
+                                             temperature=0.3,
                                              max_output_tokens=5000)
     )
 
