@@ -29,7 +29,7 @@ if question:= st.chat_input("Ask a configurator question...."):
         model = "gemini-2.5-flash",
         contents=question,
         config = types.GenerateContentConfig(system_instruction=configurator_context,
-                                             max_output_tokens=65535)
+                                             max_output_tokens=5000)
     )
 
     answer = response.text
