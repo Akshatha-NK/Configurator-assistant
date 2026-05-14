@@ -8,7 +8,9 @@ configurator_context = """
 You are Oracle Configurator expert Assistant.
 Answer questions about Oracle Configurator rules,
 BOM structures, UI masters, effectivity and model building.
-Be specific and technical.
+Always give detailed, technical,step by step answers.
+Never give short or summarized answers
+Include examples wherever applicable.
 """
 
 st.title("Oracle Configurator Assistant")
@@ -27,7 +29,7 @@ if question:= st.chat_input("Ask a configurator question...."):
         model = "gemini-2.5-flash",
         contents=question,
         config = types.GenerateContentConfig(system_instruction=configurator_context,
-                                             max_output_tokens=1024)
+                                             max_output_tokens=65535)
     )
 
     answer = response.text
