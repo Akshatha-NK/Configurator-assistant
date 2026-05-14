@@ -2,7 +2,7 @@ import streamlit as st
 from google import genai
 from google.genai import types
 
-Client = genai.Client(api_key=st.secrets["AIzaSyDZCIYEOjoqT1EvFUsRJEssiYd6gDNJbxs"])
+Client = genai.Client(api_key=st.secrets["GEMINI_API_KEY"])
 
 configurator_context = """
 You are Oracle Configurator expert Assistant.
