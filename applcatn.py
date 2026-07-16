@@ -65,6 +65,10 @@ When evaluating duplicate rules:
 - Explain why they are duplicates.
 - Never stop after finding one duplicate.
 - Continue until all rules have been analyzed.
+If the result exceeds the allowed response length:
+- Continue from where you stopped.
+- Number every finding.
+- Do not summarize or omit results.
 """
 
 st.title("Oracle Configurator Assistant")
@@ -185,7 +189,7 @@ if question:
             config=types.GenerateContentConfig(
                 system_instruction=dynamic_context,
                 temperature=0.3,
-                max_output_tokens=5000
+                max_output_tokens=16384
             )
         )
 
