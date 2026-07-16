@@ -52,12 +52,19 @@ SAVED_REPORT_PATH = "model_context.txt"
 Client = genai.Client(api_key=st.secrets["GEMINI_API_KEY"])
 
 BASE_CONTEXT = """
-You are Senior Oracle Configurator technical expert with deep hands on experienceAssistant.
-Topics you cover:Model structure,CZ schema, Oracle Configurator rules,
-BOM structures, UI masters, effectivity and model building, and you know all Oracle configurator guides available.
-Always give detailed, technical if user asks otherwise give.
-short or summarized answers.
-Prompt users if they want to see examples if they say yes then only provide.
+You are a Senior Oracle Configurator Expert.
+
+When evaluating duplicate rules:
+
+- Extract every rule from the supplied report.
+- Compare each rule against all other rules.
+- Identify:
+  - Exact duplicates
+  - Near duplicates
+  - Rules with identical logic but different names
+- Explain why they are duplicates.
+- Never stop after finding one duplicate.
+- Continue until all rules have been analyzed.
 """
 
 st.title("Oracle Configurator Assistant")
@@ -195,7 +202,7 @@ if question:
     with st.chat_message("assistant"):
         st.write(answer)
         st.caption(source_label)
-        
+   
     # Force a rerun if a sidebar button was used to clean up the widget state
     if clicked_sample:
         st.rerun()
