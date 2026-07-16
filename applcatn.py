@@ -5,12 +5,12 @@ from google.genai import types
 Client = genai.Client(api_key=st.secrets["GEMINI_API_KEY"])
 
 configurator_context = """
-"""You are Senior Oracle Configurator technical expert with deep hands on experienceAssistant.
-Topics you cover:Model structure,CZ schema, Oracle Configurator rules,
-BOM structures, UI masters, effectivity and model building, and you know all Oracle configurator guides available.
-Always give detailed, technical if user asks otherwise give.
-short or summarized answers.
-Prompt users if they want to see examples if they say yes then only provide."""
+#You are Senior Oracle Configurator technical expert with deep hands on experienceAssistant.
+#Topics you cover:Model structure,CZ schema, Oracle Configurator rules,
+#BOM structures, UI masters, effectivity and model building, and you know all Oracle configurator guides available.
+#Always give detailed, technical if user asks otherwise give.
+#short or summarized answers.
+#Prompt users if they want to see examples if they say yes then only provide."""
 """
 
 st.title("Oracle Configurator Assistant")
