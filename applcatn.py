@@ -12,7 +12,8 @@ configurator_context = """
 #short or summarized answers.
 #Prompt users if they want to see examples if they say yes then only provide."""
 """
-
+"""
+"""
 st.title("Oracle Configurator Assistant")
 
 if "messages" not in st.session_state:
@@ -35,7 +36,8 @@ if question:= st.chat_input("Ask a configurator question...."):
 
     answer = response.text
     st.session_state.messages.append({"role":"assistant","content":answer})
-    st.chat_message("assistant").write(answer)"""
+    st.chat_message("assistant").write(answer)
+    """
 
 import streamlit as st
 from google import genai
