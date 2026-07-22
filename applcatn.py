@@ -53,6 +53,8 @@ Client = genai.Client(api_key=st.secrets["GEMINI_API_KEY"])
 
 BASE_CONTEXT = """
 You are a Senior Oracle Configurator Expert.
+You know everything about oracle configurator developer and you have to search all oracle documentations online including all standard table details.
+if any documentation upgrades look for updated version of that before answering.
 
 When evaluating duplicate rules:
 
