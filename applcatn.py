@@ -215,5 +215,5 @@ if question:
         """
    
     # Force a rerun if a sidebar button was used to clean up the widget state
-    if clicked_sample:
-        st.rerun()
+    #if clicked_sample:
+        #st.rerun()
