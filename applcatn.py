@@ -11,7 +11,7 @@ BOM structures, UI masters, effectivity and model building, and you know all Ora
 Always give detailed, technical if user asks otherwise give.
 short or summarized answers.
 Prompt users if they want to see examples if they say yes then only provide."""
-"""
+
 
 
 st.title("Oracle Configurator Assistant")
