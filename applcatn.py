@@ -212,7 +212,7 @@ if question:= st.chat_input("Ask a configurator question...."):
     #with st.chat_message("assistant"):
         #st.write(answer)
         #st.caption(source_label)
-        """
+       # """
    
     # Force a rerun if a sidebar button was used to clean up the widget state
     #if clicked_sample:
