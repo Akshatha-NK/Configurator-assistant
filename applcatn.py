@@ -36,7 +36,7 @@ if question:= st.chat_input("Ask a configurator question...."):
 
     answer = response.text
     st.session_state.messages.append({"role":"assistant","content":answer})
-   st.chat_message("assistant").write(answer)
+    st.chat_message("assistant").write(answer)
     
 
 #import streamlit as st
